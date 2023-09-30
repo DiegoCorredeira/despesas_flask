@@ -15,7 +15,7 @@
             <li><a href="{{url_for('listar_ganhos')}}">Ver Ganhos</a></li>
         </ul>
     </nav>
-    <h2>Adicionar Ganhos</h2>
+    <h2>Editar Ganho</h2>
     <form method="POST" action="{{ url_for('editar_ganhos', id=ganho.id) }}">
         <label for="descricao_ganho">Descrição:</label>
         <input type="text" id="descricao_ganho" name="descricao_ganho" required><br>

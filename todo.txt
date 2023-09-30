@@ -1,0 +1,2 @@
+- Deixar o HTML mais limpo usando o extends
+- Melhorar o estilo do app 
