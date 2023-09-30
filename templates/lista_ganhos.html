@@ -26,6 +26,7 @@
                 <th>Data</th>
                 <th>Valor</th>
                 <th>Responsável</th>
+                <th>Ações</th> <!-- Coluna para botões de ação -->
             </tr>
         </thead>
         <tbody>
@@ -36,11 +37,16 @@
                 <td>{{ganho.data}}</td>
                 <td>R${{ganho.valor}}</td>
                 <td>{{ganho.responsavel}}</td>
+                <td>
+                    <a href="{{ url_for('editar_ganhos', id=ganho.id) }}">Editar</a> 
+                    <form action="{{ url_for('deletar_ganhos', id=ganho.id) }}" method="post" onsubmit="return confirm('Tem certeza que deseja deletar esta despesa?')">
+                        <input type="submit" value="Deletar">
+                    </form>
+                </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
     <br>
-
 </body>
 </html>
