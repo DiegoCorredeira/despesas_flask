@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para o título "Adicionar Ganhos" */
+h2 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos para o formulário */
+form {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para as etiquetas dos campos de entrada */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilos para os campos de entrada de texto e data */
+input[type="text"],
+input[type="date"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Estilos para o botão "Adicionar Ganhos" */
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Estilos para o link "Ver Ganhos" */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+/* Estilos para o link "Ver Ganhos" quando hover */
+a:hover {
+    text-decoration: underline;
+}
+/* Estilos básicos para o menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    background-color: #333; /* Altere a cor de fundo para azul */
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* Mantenha o texto em branco para contraste */
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color:#007BFF;
+    text-decoration: none;
+}

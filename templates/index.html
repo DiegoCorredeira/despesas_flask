@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+
+    <title>Cadastro de Despesas</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{url_for('index')}}">Adicionar Despesa</a></li>
+            <li><a href="{{url_for('lista_despesas')}}">Ver Despesa</a></li>
+            <li><a href="{{url_for('adicionar_ganhos')}}">Adicionar Ganhos</a></li>
+            <li><a href="{{url_for('listar_ganhos')}}">Ver Ganhos</a></li>
+        </ul>
+    </nav>
+    <h1>Cadastro de despesas</h1>
+    <form method="POST">
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" name="descricao" required><br>
+
+        <label for="categoria">Categoria:</label>
+        <input type="text" id="categoria" name="categoria" required><br>
+
+        <label for="Data">Data:</label>
+        <input type="date" id="Data" name="data" required><br>
+
+        <label for="valor">Valor:</label>
+        <input type="text" id="valor" name="valor" required><br>
+
+        <label for="status">Status:</label>
+        <select name="status" name="status" required>
+            <option value="Pendente">Pendente</option>
+            <option value="Pago">Pago</option>
+        </select><br>
+
+        <input type="submit" value="Cadastrar Despesa">
+        <br>
+    </form>
+
+    <h2>
+        
+    </h2>
+    
+</body>
+</html>

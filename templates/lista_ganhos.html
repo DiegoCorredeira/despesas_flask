@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='lista_ganhos.css') }}">
+
+    <title>Nossos Ganhos</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{url_for('index')}}">Adicionar Despesa</a></li>
+            <li><a href="{{url_for('lista_despesas')}}">Ver Despesa</a></li>
+            <li><a href="{{url_for('adicionar_ganhos')}}">Adicionar Ganhos</a></li>
+            <li><a href="{{url_for('listar_ganhos')}}">Ver Ganhos</a></li>
+        </ul>
+    </nav>
+    <h2>Lista de Ganhos</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th>Categoria</th>
+                <th>Data</th>
+                <th>Valor</th>
+                <th>Responsável</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ganho in ganhos %}
+            <tr>
+                <td>{{ganho.descricao}}</td>
+                <td>{{ganho.categoria}}</td>
+                <td>{{ganho.data}}</td>
+                <td>R${{ganho.valor}}</td>
+                <td>{{ganho.responsavel}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+
+</body>
+</html>

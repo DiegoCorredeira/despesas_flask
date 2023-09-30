@@ -1,0 +1,85 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: sans-serif;
+}
+
+/* Estilos para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para o título "Lista de Ganhos" */
+h2 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos para a tabela */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para as células de cabeçalho da tabela */
+th {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilos para as células de dados da tabela */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Estilos para os links "Adicionar Ganhos" e "Cadastrar mais despesas" */
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+/* Estilos básicos para o menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    background-color: #333;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #555;
+}

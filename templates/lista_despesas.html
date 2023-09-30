@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='lista_despesas.css') }}">
+    <title>Despesas Cadastradas</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{url_for('index')}}">Adicionar Despesa</a></li>
+            <li><a href="{{url_for('lista_despesas')}}">Ver Despesa</a></li>
+            <li><a href="{{url_for('adicionar_ganhos')}}">Adicionar Ganhos</a></li>
+            <li><a href="{{url_for('listar_ganhos')}}">Ver Ganhos</a></li>
+        </ul>
+    </nav>
+    <h1>Despesas Cadastradas</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th>Categoria</th>
+                <th>Data</th>
+                <th>Valor</th>
+                <th>Status</th>
+                <th>Ações</th> <!-- Coluna para botões de ação -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for despesa in despesas %}
+            <tr>
+                <td>{{ despesa.descricao }}</td>
+                <td>{{ despesa.categoria }}</td>
+                <td>{{ despesa.data }}</td>
+                <td>R$ {{ despesa.valor }}</td>
+                <td class="{% if despesa.status == 'Pago' %}pago{% elif despesa.status == 'Pendente' %}pendente{% endif %}">{{ despesa.status }}</td>
+                <td>
+                    <a href="{{ url_for('editar_despesa', id=despesa.id) }}" style="background-color: rgb(212, 212, 1);">Editar</a>
+                    <form action="{{ url_for('deletar_despesa', id=despesa.id) }}" method="post" onsubmit="return confirm('Tem certeza que deseja deletar esta despesa?')">
+                        <input type="submit" value="Deletar">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

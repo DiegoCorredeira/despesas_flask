@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganhos</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='ganhos.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{url_for('index')}}">Adicionar Despesa</a></li>
+            <li><a href="{{url_for('lista_despesas')}}">Ver Despesa</a></li>
+            <li><a href="{{url_for('adicionar_ganhos')}}">Adicionar Ganhos</a></li>
+            <li><a href="{{url_for('listar_ganhos')}}">Ver Ganhos</a></li>
+        </ul>
+    </nav>
+    <h2>Adicionar Ganhos</h2>
+    <form method="POST" action="/ganhos">
+        <label for="descricao_ganho">Descrição:</label>
+        <input type="text" id="descricao_ganho" name="descricao_ganho" required><br>
+
+        <label for="categoria_ganho">Categoria:</label>
+        <input type="text" id="categoria_ganho" name="categoria_ganho" required><br>
+
+        <label for="data_ganho">Data:</label>
+        <input type="date" id="data_ganho" name="data_ganho" required><br>
+
+        <label for="valor_ganho">Valor</label>
+        <input type="text" id="valor_ganho" name="valor_ganho" required><br>
+
+        <label for="responsavel_ganho">Responsável: </label>
+        <input type="text" id="responsavel_ganho" name="responsavel_ganho" required><br>
+
+        </select><br>
+
+        <input type="submit" value="Adicionar Ganhos">
+        
+        <br>
+    </form>
+</body>
+</html>

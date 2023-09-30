@@ -1,0 +1,99 @@
+/* Define uma fonte padrão para todo o documento */
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilizando a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilizando o status "Pago" */
+td.pago {
+    background-color: green;
+    color: white; /* Adiciona cor ao texto para melhor visibilidade */
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilizando o status "PENDENTE" */
+td.pendente {
+    background-color: rgb(255, 153, 19);
+    color: white; /* Adiciona cor ao texto para melhor visibilidade */
+    font-weight: bold;
+    text-align: center;
+}
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilizando os links */
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos básicos para o menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    background-color: #333;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+form > input{
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+form > inpu:hover {
+    background-color: #0056b3;
+}
